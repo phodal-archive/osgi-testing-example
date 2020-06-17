@@ -2,15 +2,15 @@ dist: trusty
 
 language: java
 
-script: ./mvnw verify javadoc:javadoc site:site
+script: ./mvnw verify 
 
 install:
 - ./mvnw --version
 
 stages:
   - test
-  - name: deploy
-    if: (branch = master) AND (NOT type IN (pull_request))
+#  - name: deploy
+#    if: (branch = master) AND (NOT type IN (pull_request))
 
 jobs:
   include:
